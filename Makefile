@@ -38,5 +38,6 @@ clean:
 .PHONY: static-files
 static-files: client/node_modules
 	@rm -rf public/*
+	@mkdir public
 	@cd client && npm run build
 	@mv client/build/* public/
